@@ -1,0 +1,70 @@
+/*To Print and Display Middle Element Zero*/
+import java.util.*;
+class MatrixMiddle
+{
+	public static void main(String args[])
+	{
+        // read and display a two dimensional array
+
+		int row,col,i,j;
+		int matrix[][];
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter number of rows and Columns");
+		row=sc.nextInt();
+		col=sc.nextInt();
+
+		matrix=new int[row][col];
+
+		//read a 2d array
+		System.out.println("Enter "+(row*col)+" elements");
+		for(i=0;i<row;i++)
+		{
+			for(j=0;j<col;j++)
+			{
+				  matrix[i][j]=sc.nextInt();
+			}
+		}
+		for(i=0;i<row;i++)
+		{
+			for(j=0;j<col;j++)
+			{
+				if(i==0||j==0||i==row-1||j==col-1)
+				{
+					System.out.print(matrix[i][j]+" ");
+				}
+				else
+					System.out.print("0 ");
+			}
+            System.out.println();
+		}
+		}
+	}
+
+	//Output//
+
+	Enter number of rows and Columns
+4
+4
+Enter 16 elements
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+1 2 3 4
+5 0 0 8
+9 0 0 12
+13 14 15 16
+Press any key to continue . . .
